@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/chatStyles.css">
+    <link
+        href="data:image/x-icon;base64,AAABAAEAEBAAAAEAIABoBAAAFgAAACgAAAAQAAAAIAAAAAEAIAAAAAAAAAQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMkAAADJAAAAyQAAAMkAAADJAAAAyQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyan/AP+p/wD/qf8A/6n/AP8AAADJAAAAyQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyQAAAMkAAADJqf8A/6n/AP+p/wD/qf8A/6n/AP8AAADJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyan/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/wAAAMkAAAAAAAAAAAAAAAAAAAAAAAAAyan/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/AAAAyQAAAAAAAAAAAAAAAAAAAMmp/wD/qf8A/wAAAMkAAADJAAAAyQAAAMkAAADJqf8A/6n/AP+p/wD/qf8A/wAAAMkAAAAAAAAAAAAAAMkAAADJqf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP8AAADJAAAAAAAAAMkA3f//AAAAyan/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/AAAAyQAAAMkA3f//AN3//wAAAMmp/wD/qf8A/wAAAMkAAADJAAAAyQAAAMkAAADJAAAAyQAAAMmp/wD/qf8A/wAAAMkAAADJAN3//wDd//8A3f//AAAAyan/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/wAAAMkAAAAAAAAAyQDd//8A3f//AN3//wDd//8AAADJqf8A/6n/AP+p/wD/qf8A/6n/AP+p/wD/qf8A/wAAAMkAAAAAAAAAAAAAAMkA3f//AN3//wDd//8A3f//AN3//wAAAMkAAADJAAAAyQAAAMkAAADJAAAAyQAAAMkAAAAAAAAAAAAAAAAAAADJ/////wDd//8A3f//AN3//wDd//8A3f//AN3//wDd//8A3f//AN3//wDd//8AAADJAAAAAAAAAAAAAAAAAAAAAAAAAMn/////AN3//wDd//8A3f//AN3//wDd//8A3f//AN3//wDd//8AAADJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAyf////8A3f//AN3//wDd//8A3f//AN3//wDd//8AAADJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAADJAAAAyQAAAMkAAADJAAAAyQAAAMkAAADJAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA+B8AAPwHAAD4AwAA8AEAAOAAAADgAAAAwAAAAIAAAAAAAAAAAAEAAAADAAAABwAAAAcAAIAPAADAHwAA4D8AAA=="
+        rel="icon" type="image/x-icon" />
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://kit.fontawesome.com/c939d0e917.js"></script>
+    <script>
+        const roomName = "<%= (roomName) %>"
+        const userName = "<%= (userName) %>"
+    </script>
+    <title><%= (roomName) %></title>
+
+
+</head>
+
+<body>
+    <div class="row">
+        <div class="row__left">
+            <div class="main__videos">
+                <div id="video-grid">
+
+                </div>
+
+            </div>
+            <div class="video__footer">
+                <div onClick="playStop()" class="stopButton">
+                    <i  class="fas fa-video fa-lg"></i>
+                </div>
+                <div  onClick="muteUnmute()" class="muteButton">
+                    <i class="fas fa-microphone fa-lg"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+        <div class="chat-grid row__right">
+            <h1>Welcome to <%= (roomName) %></h1>
+            <ul class="notification"></ul>
+            <ul class="chatMessages"></ul>
+
+            <input type="text" placeholder="Type a message...." />
+
+        </div>
+
+
+
+
+    </div>
+
+
+
+
+    <script src="/script.js"></script>
+</body>
+
+</html>
