@@ -4,7 +4,6 @@ const server = require("http").Server(app);
 const io = require("socket.io")(server);
 const bodyParser = require("body-parser");
 
-
 app.set("view engine", "ejs");
 
 app.use(express.static("public"));
@@ -51,4 +50,4 @@ io.on("connection", (socket) => {
   });
 });
 
-server.listen(5000);
+server.listen(process.env.PORT || 5000);
