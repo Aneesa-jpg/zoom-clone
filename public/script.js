@@ -1,5 +1,7 @@
 const socket = io("/");
 const peer = new Peer({
+path:'/peerjs',
+host:'/',
   port: 443,
 });
 let myVideoStream;
